@@ -23,7 +23,7 @@ import { EasCreateSchema } from "eas-react"
 function App() {
   return (
     <div>
-      <EasCreateSchema network='sepolia'
+      <EasCreateSchema network='rootstock-testnet'
           signer={signer!}
           onSchemaCreated={(schemaId) => {
             console.log('Schema created:', schemaId);

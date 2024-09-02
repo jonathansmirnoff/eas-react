@@ -43,7 +43,7 @@ export const getSchemaFromUid = async (schemaId: string, network: Network) => {
     let config = {
         method: 'post',
         maxBodyLength: Infinity,
-        url: 'https://sepolia.easscan.org/graphql',
+        url: 'http://localhost:4000/graphql',
         headers: {
             'content-type': 'application/json'
         },
