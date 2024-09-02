@@ -10,9 +10,11 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "exports": "./dist/esm/index.js",
   "keywords": [],
   "author": "Sweta Shaw",
   "license": "ISC",
+  "type": "commonjs",
   "peerDependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.0",
