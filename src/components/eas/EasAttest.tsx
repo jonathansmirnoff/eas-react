@@ -128,10 +128,6 @@ const EasAttest: React.FC<EasProps> = (props) => {
             });
 
             const newAttestationUID = await transaction.wait();
-            setTimeout(() => {
-                console.log('Attestation UID:', newAttestationUID);
-            }, 10000);
-
             console.log('Transaction receipt:', transaction.receipt);
 
             onClose();

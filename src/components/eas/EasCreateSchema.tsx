@@ -96,10 +96,7 @@ const EasCreateSchema: React.FC<EasCreateSchemaProps> = (props) => {
         });
 
         // Optional: Wait for transaction to be validated
-        const schemaUid = await transaction.wait();
-        setTimeout(() => {
-            console.log('Attestation UID:', schemaUid);
-        }, 10000);
+        const schemaUid = await transaction.wait();        
         console.log("Schema Uid:", schemaUid);
         if (props.onSchemaCreated) {
             props.onSchemaCreated(schemaUid);
