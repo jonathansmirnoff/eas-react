@@ -128,9 +128,6 @@ const EasAttest: React.FC<EasProps> = (props) => {
             });
 
             const newAttestationUID = await transaction.wait();
-
-            console.log('New attestation UID:', newAttestationUID);
-
             console.log('Transaction receipt:', transaction.receipt);
 
             onClose();
@@ -180,7 +177,7 @@ const EasAttest: React.FC<EasProps> = (props) => {
                     <ModalBody>
                         <Text fontSize="lg" color="gray.500" mb={4} fontWeight={800}>
                             # {schemaObject.index} &nbsp;|&nbsp;
-                            <Link href={`https://sepolia.easscan.org/schema/view/${schemaObject.id}`} isExternal color="blue.500">
+                            <Link href={`http://localhost:4000/graphql/schema/view/${schemaObject.id}`} isExternal color="blue.500">
                                 Schema ID:  {schemaObject.id && `${schemaObject.id.slice(0, 6)}...${schemaObject.id.slice(-4)}`}
                             </Link>
                         </Text>
